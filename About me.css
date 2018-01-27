@@ -6,7 +6,7 @@ body {
     color: white;
 }
 
-video {
+#video {
     position: absolute;
     right: 245px;
     top: 275px;
