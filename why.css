@@ -1,0 +1,26 @@
+body {
+    background-image:url("noisy-texture-100x100-o21-d34-c-1f1c1c-t0.png");
+    background-repeat: repeat;
+    background-color:black;
+    
+}
+
+.loading-image {
+    top: 50%;
+    left: 50%;
+    margin: 30px 0px 0px 550px;
+    
+        }
+
+.Umaru {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -290px 0px 0px -255px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 5px 5px #888888;
+}
