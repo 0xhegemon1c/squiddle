@@ -1,0 +1,15 @@
+body {
+    background-image:url("noisy-texture-100x100-o21-d34-c-1f1c1c-t0.png");
+    color:white;
+    font-family:Times;
+}
+h1 {
+    text-shadow: 2px 2px #9c9c9c;
+    text-align:center;
+}
+
+div {
+    text-align: center;
+    border: 2px solid gray;
+	padding: 8px 10px;
+}
