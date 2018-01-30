@@ -61,10 +61,3 @@ div {
     position: absolute;
     left: 250px;
     top: 700px;
-}
-
-@media (max-width: 700px) {
-    div {
-        width: 100%;
-    }
-}
