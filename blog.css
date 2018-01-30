@@ -98,7 +98,6 @@ div {
 
 }
 
-@media (max-width: 960px) {
-  nav ul     { display: none; }
-  nav select { display: inline-block; }
+#hidden {
+ display: none;
 }
