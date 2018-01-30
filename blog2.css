@@ -3,8 +3,7 @@ body {
     background-color: black;
     text-align: center;
     background-image: url("back.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
 }
 
 #one {
