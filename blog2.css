@@ -34,3 +34,7 @@ li {
     border: 2px solid gray;
     padding: 8px 10px;
 }
+
+#one {
+    display: none;
+}
