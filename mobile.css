@@ -14,3 +14,8 @@ nav select {
   nav ul     { display: none; }
   nav select { display: inline-block; }
 }
+
+ul {
+    display: none;
+}
+
