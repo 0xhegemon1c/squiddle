@@ -63,3 +63,12 @@ div {
     top: 700px;
 }
 
+@media (max-width: 700px) {
+     body {
+        background-image: url("texture.png");
+        background-repeat: repeat;
+        font-family: Times;
+        color: white;
+    }
+}
+
