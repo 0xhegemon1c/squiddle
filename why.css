@@ -24,3 +24,8 @@ body {
     padding: 5px;
     box-shadow: 5px 5px #888888;
 }
+
+div {
+    position: absolute;
+    bottom: 10px;
+}
