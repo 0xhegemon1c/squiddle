@@ -1,0 +1,18 @@
+body {
+    font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: black;
+    text-align: center;
+    background-image: url("noisy-texture-100x100-o21-d34-c-1f1c1c-t0.png");
+}
+
+p {
+    text-align: center;
+    }
+    
+h1 {
+text-align: center;
+}
+
+ol {
+text-align: center;
+}
