@@ -18,5 +18,5 @@ text-align: center;
 }
 
 ul {
-     visibility: hidden;
+     display: none;
 }
