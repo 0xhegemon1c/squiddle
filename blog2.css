@@ -2,7 +2,7 @@ body {
     font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: black;
     text-align: center;
-    background-image: url("noisy-texture-100x100-o21-d34-c-1f1c1c-t0.png");
+    background-image: url("back.png");
     background-repeat: repeat;
 }
 
@@ -14,15 +14,11 @@ h1 {
     text-align: center;
 }
 
-ol {
-    text-align: center;
-}
-
-ul {
-     display: none;
-}
-
 img {
     display: block;
     margin: 0 auto;
+}
+
+#hidden {
+    display: inline;
 }
