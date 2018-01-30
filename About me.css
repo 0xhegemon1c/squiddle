@@ -7,7 +7,6 @@ body {
 }
 
 #video {
-    position: absolute;
     right: 245px;
     top: 275px;
     border: 1px solid;
