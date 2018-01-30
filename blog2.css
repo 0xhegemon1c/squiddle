@@ -8,6 +8,8 @@ body {
 
 ol {
     text-align: center;
+    border: 2px solid gray;
+    padding: 8px 10px;
     }
     
 h1 {
