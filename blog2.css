@@ -8,6 +8,8 @@ body {
 
 ol {
     text-align: center;
+    color: green;
+    font-family: Times;
     }
     
 h1 {
@@ -21,8 +23,8 @@ ul {
 
 
 #glider {
-    height: 300px; 
-    width: 300px;
+    height: 100px; 
+    width: 100px;
     max-width:100%;
 }
 
