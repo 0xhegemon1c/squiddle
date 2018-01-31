@@ -38,3 +38,8 @@ li {
 #one {
     display: none;
 }
+
+#hidden {
+ display: inline;
+}
+
