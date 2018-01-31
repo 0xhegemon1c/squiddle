@@ -10,6 +10,7 @@ ol {
     text-align: center;
     color: green;
     font-family: Times;
+    align:center;
     }
     
 h1 {
@@ -26,10 +27,12 @@ ul {
     height: 100px; 
     width: 100px;
     max-width:100%;
+    align: center;
 }
 
 #hidden {
     position: absolute;
+    align: center;
 }
 
 li {
