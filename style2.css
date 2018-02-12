@@ -30,3 +30,15 @@ p {
     background-color: white;
     color: green;
 }
+
+#stuffToShow {
+    display:none;
+}
+
+#checkbox {
+    opacity:0.01;
+}
+
+#checkbox:checked + #stuffToShow {
+    display:block;
+}
