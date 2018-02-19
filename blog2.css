@@ -11,6 +11,7 @@ ol {
     color: green;
     font-family: Times;
     text-align: center;
+    text-decoration: underline;
     }
     
 h1 {
@@ -33,10 +34,6 @@ ul {
 #hidden {
     position: absolute;
     align: center;
-}
-
-li {
-    text-align: center; 
 }
 
 #one {
