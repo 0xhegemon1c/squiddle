@@ -21,7 +21,7 @@ p {
 }
 
 Img {
-    position: center;
+    position: absolute;
 }
 
 .button5 {
