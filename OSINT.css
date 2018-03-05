@@ -32,6 +32,7 @@ p {
 }
 
 img {
-    top: 0; bottom:0; left: 0; right:0;
-    margin: auto;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
 }
