@@ -34,4 +34,13 @@ p {
 .button5:hover {
     background-color: white;
     color: green;
+}	
+.box {
+  display: none;
+  background: #ccc;
+  width: 200px;
+  height: 100px;
+}
+#trigger:checked + .box {
+  display: block;
 }
