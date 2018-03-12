@@ -38,7 +38,7 @@ p {
 .box {
   display: none;
   background: ;
-  width: 900px;
+  width: 1000px;
   height: 100px;
 }
 #trigger:checked + .box {
