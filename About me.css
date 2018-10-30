@@ -6,7 +6,7 @@ body {
     color: white;
 }
 
-#video {
+#poem {
     position: absolute;
     right: 555px;
     top: 275px;
@@ -75,4 +75,3 @@ div {
     background-color: white;
     color: green;
 }
-
