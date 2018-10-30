@@ -31,10 +31,6 @@ p {
     color: green;
 }
 
-img {
-    display: inline;
-}
-
 #squiddy {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
