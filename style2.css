@@ -39,3 +39,8 @@ p {
     top: 250px;
     position: absolute;
 }
+
+#levelup
+{
+    float:left;
+}
