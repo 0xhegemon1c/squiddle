@@ -34,3 +34,20 @@ p {
     background-color: white;
     color: green;
 }	
+
+#one {
+        border: 2px solid gray;
+	    padding: 5px 8px;
+}
+
+
+#two {
+        border: 2px solid gray;
+	    padding: 5px 8px;
+}
+
+
+#three {
+        border: 2px solid gray;
+	    padding: 5px 8px;
+}
