@@ -41,4 +41,5 @@ img {
     border-radius: 20px; 
     right: 100px;
     top: 250px;
+    position: absolute;
 }
