@@ -40,7 +40,8 @@ p {
     position: absolute;
 }
 
-#levelup
+#text
 {
-    float:left;
+    text-align: left;
 }
+
