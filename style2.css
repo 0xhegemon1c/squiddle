@@ -50,3 +50,7 @@ p {
 #corn:hover {
 	transform: scale(1.1);
 }
+
+#corn {
+	float: right;
+}
