@@ -47,10 +47,6 @@ p {
     padding: 5px 8px;
 }
 
-#corn {
-	float: left;
-}
-
 #corn:hover {
 	transform: scale(1.1);
 }
