@@ -57,6 +57,13 @@ h1 {
          -o-animation-delay: 3s;
             animation-delay: 3s;
   }
+
+  .animate-third {
+    -webkit-animation-delay: 4s;
+       -moz-animation-delay: 4s;
+         -o-animation-delay: 4s;
+            animation-delay: 4s;
+  }
   
   @-webkit-keyframes reveal {
     0% {
