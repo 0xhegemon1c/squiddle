@@ -1,13 +1,16 @@
 <!DOCTYPE HTML>
 <title> Jay's Realm </title>
-    <head> 
-        <script src="jquery-3.3.1.min.js"> 
-        $(window).keypress(function(e) {
-    if (e.keyCode == 0 || e.keyCode == 32) {
-    alert("Hello! I am an alert box!!");
-  }
-});
-        </script>
+    <head>
+        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">      
+         $(document).ready(function() {
+        $(document).keydown(function(e) {
+          if (e.keyCode == '32' || e.keycode == '0') {
+            alert('space');
+          }
+        });
+      });
+    </script>
         <link rel="shortcut icon" href="glider_KJ0_icon.ico" type="image/x-icon"/>
         <link href="Style3.css" rel="stylesheet" type="text/css">
         <meta name="robots" content="noindex,nofollow">
