@@ -1,0 +1,117 @@
+body {
+  text-align: center;
+  color: white;
+  background-image: URL("./Images/Lions-Eyes-e1542857608975.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+span, a {
+  color: green;
+  font-family: monospace;
+  font-size: 20px;
+
+}
+a:hover {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+background-position: bottom;
+background-repeat: repeat-x;
+background-size: 20%;
+border-bottom: 0;
+padding-bottom: .3em;
+text-decoration: none;
+color: white;
+}
+
+h1 {
+
+  text-shadow: 2px 2px #9c9c9c;
+  font-family: courier;
+  padding: 10px;
+}
+
+p.proverbs281 {
+  font-family: fantasy;
+  font-size: 14px;
+    padding: 10px;
+}
+
+.responsive-section {
+  margin-left: 10px;
+  margin-top: -740px;
+  position: relative;
+}
+
+.responsive-section {
+  background-color: black;
+  margin: 0 auto;
+  display:block;
+  width: 50%;
+  opacity: 0.6;
+  border-radius: 5%;
+  box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+      background-size: 768px 1024px;
+    }
+    .responsive-section {
+      margin-top: 170px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    body {
+      background-size: 360px 740px;
+    }
+    .responsive-section {
+      margin-top: 170px;
+    }
+    h1 {
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+    body {
+      background-size: 375px 667px;
+    }
+    .responsive-section {
+      margin-top: 170px;
+    }
+    h1 {
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) and (max-height: 812px) {
+    body {
+      background-size: 375px 812px;
+    }
+    .responsive-section {
+      margin-top: 170px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    body {
+      background-size: 414px 736px;
+    }
+    .responsive-section {
+      margin-top: 170px;
+    }
+    h1 {
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    body {
+      background-size: 768px 1280px;
+    }
+    .responsive-section {
+      margin-top: 170px;
+    }
+}
