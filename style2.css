@@ -1,0 +1,26 @@
+body {
+  color: white;
+  background-color: black;
+  font-family: courier;
+  text-align: center;
+}
+
+img {
+  width: 20%;
+  height: auto;
+  border: 4px dotted green;
+  border-radius: 10px;
+}
+
+a:hover {
+  color: green;
+}
+
+main {
+  background-image: URL("./Images/noisy-texture-100x100-o84-d78-c-000000-t0.png");
+}
+
+
+ul {
+  background-image: URL("./Images/noisy-texture-100x100-o84-d78-c-000000-t0.png");
+}
