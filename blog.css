@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  background-image: URL("./Images/background_transparent.png");
+  background-size: 130vh;
+  background-repeat: no-repeat;
+}
+
+.dropbtn {
+  background-color: gray;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  font-family: monospace;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 260px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+    font-family: monospace;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 20px 16px;
+  text-decoration: none;
+  display: block;
+  border: 1px dashed green;
+}
+
+.dropdown-content a:hover {background-color: #ddd;font-weight: bold;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+button {
+  width: 260px;
+}
