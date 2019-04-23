@@ -6,20 +6,27 @@ body {
 }
 
 img {
-  width: 20%;
+  width: 40%;
   height: auto;
-  border-radius: 50px;
+  border-radius: 20%;
 }
 
-a:hover {
+a {
   color: green;
 }
 
-main {
-  background-image: URL("./Images/noisy-texture-100x100-o84-d78-c-000000-t0.png");
+a:hover {
+  color: purple;
 }
 
-
-ul {
+div {
   background-image: URL("./Images/noisy-texture-100x100-o84-d78-c-000000-t0.png");
+  width: 50%;
+  height: 700px;
+  border-radius: 20%;
+  align: center;
+  display: block;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 1px 1px 30px #555 inset;
 }
