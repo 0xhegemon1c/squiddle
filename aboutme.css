@@ -28,5 +28,5 @@ div {
   display: block;
   margin: auto;
   padding: 20px;
-   box-shadow: 1px 1px 30px #555 inset;
+  box-shadow: 1px 1px 30px #555 inset;
 }
