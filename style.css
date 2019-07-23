@@ -5,7 +5,6 @@ body {
   background-repeat: no-repeat;
   background-color: black;
   background-image:URL("./Images/digital.gif");
-  height:100%;
 }
 
 span, a {
