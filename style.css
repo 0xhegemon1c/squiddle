@@ -1,7 +1,7 @@
 body {
   text-align: center;
   color: white;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
   background-image:URL("./Images/digital.gif");
@@ -39,23 +39,5 @@ p.proverbs281 {
 
 section {
   background-color:black;
-  
-}
-
-
-
-
-.responsive-section {
-  margin-left: 10px;
-  margin-top: -740px;
-  position: relative;
-}
-
-.responsive-section {
-  margin: 0 auto;
-  display:block;
-  width: 50%;
-  opacity: 0.6;
-  border-radius: 5%;
-  box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.5);
+  width:600px;
 }
