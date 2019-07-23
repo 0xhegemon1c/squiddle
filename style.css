@@ -1,7 +1,7 @@
 body {
   text-align: center;
   color: white;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-color: black;
   background-image:URL("./Images/digital.gif");
