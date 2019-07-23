@@ -4,6 +4,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
+  background-image:URL("digital.gif");
 }
 
 span, a {
@@ -43,7 +44,6 @@ p.proverbs281 {
 }
 
 .responsive-section {
-  background-image:URL("./Images/Lions-Eyes-e1542857608975.jpg");
   margin: 0 auto;
   display:block;
   width: 50%;
