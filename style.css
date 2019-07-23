@@ -40,4 +40,7 @@ p.proverbs281 {
 section {
   background-color:black;
   width:600px;
+  align: center;
+  display: block;
+  margin: auto;
 }
