@@ -15,10 +15,11 @@ h1 {
     border: 2px solid rgba(0, 0, 0, 0.1);
     height: 400px; /* maximum height of the box */
     background-image: URL("./Images/background_transparent.png");
+    background-size: 500px 400px;
+    background-color: black;
     padding: 15px;
     width: 50%;
     overflow-y: scroll;
-    opacity: 1.0;
     border-radius: 20%;
     position: absolute;
     left: 0px;
