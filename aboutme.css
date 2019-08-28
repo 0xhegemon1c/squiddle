@@ -3,6 +3,7 @@ body {
   background-color: black;
   font-family: courier;
   text-align: center;
+  background-image: URL("./Images/noisy-texture-100x100-o42-d100-c-000000-t0.png");
 }
 
 img {
@@ -19,6 +20,3 @@ a:hover {
   color: purple;
 }
 
-main {
-    background-image: URL("./Images/noisy-texture-100x100-o84-d78-c-000000-t0.png");
-}
