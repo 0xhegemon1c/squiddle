@@ -15,7 +15,7 @@ h1 {
     border: 2px solid rgba(0, 0, 0, 0.1);
     height: 600px; /* maximum height of the box */
     background-image: URL("./Images/background_transparent.png");
-    background-size: 600px 600px;
+    background-size: 600px 800px;
     background-repeat: no-repeat;
     background-color: black;
     padding: 15px;
