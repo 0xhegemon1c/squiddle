@@ -23,6 +23,7 @@ h1 {
     padding: 15px;
     width: 50%;
     overflow-y: scroll;
-    align: center;
+    position: center;
     opacity: 0.2;
+    border-radius: 20%;
 }
