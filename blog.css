@@ -27,9 +27,3 @@ h1 {
     margin-right: auto 
   
 }
-
-span {
-    position: sticky;
-    top: 0;
-    text-align: center;
-}
