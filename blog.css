@@ -13,15 +13,15 @@ h1 {
 .scroll-box {
     background: #f4f4f4;
     border: 2px solid rgba(0, 0, 0, 0.1);
-    height: 400px; /* maximum height of the box */
+    height: 600px; /* maximum height of the box */
     background-image: URL("./Images/background_transparent.png");
-    background-size: 400px 550px;
+    background-size: 600px 600px;
     background-repeat: no-repeat;
     background-color: black;
     padding: 15px;
     width: 50%;
     overflow-y: scroll;
-    border-radius: 20%;
+    border-radius: 5%;
     display: block;
     margin-left: auto;
     margin-right: auto 
