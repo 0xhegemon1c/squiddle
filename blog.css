@@ -2,7 +2,6 @@ body {
   background-color: black;
   color: white;
   text-align: center;
-  background-image: URL("./Images/background_transparent.png");
   background-size: 130vh;
   background-repeat: no-repeat;
 }
@@ -15,13 +14,15 @@ h1 {
     background: #f4f4f4;
     border: 2px solid rgba(0, 0, 0, 0.1);
     height: 400px; /* maximum height of the box */
+    background-image: URL("./Images/background_transparent.png");
     padding: 15px;
     width: 50%;
     overflow-y: scroll;
-    opacity: 0.8;
+    opacity: 1.0;
     border-radius: 20%;
     position: absolute;
     left: 0px;
     top: 0px;
     z-index: -1;
+  
 }
