@@ -12,15 +12,6 @@ h1 {
 }
 
 .scroll-box {
-    height: 400px; /* maximum height of the box */
-    overflow-y: scroll;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-}
-
-.scroll-box {
     background: #f4f4f4;
     border: 2px solid rgba(0, 0, 0, 0.1);
     height: 400px; /* maximum height of the box */
@@ -29,4 +20,8 @@ h1 {
     overflow-y: scroll;
     opacity: 0.8;
     border-radius: 20%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
 }
