@@ -4,7 +4,7 @@ body {
   text-align: center;
   background-size: 130vh;
   background-image: URL("./Images/noisy-texture-100x100-o42-d100-c-000000-t0.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 h1 {
