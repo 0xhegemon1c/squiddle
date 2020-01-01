@@ -5,6 +5,8 @@ body {
   background-repeat: no-repeat;
   background-color: black;
   background-image:URL("./Images/Beautiful-Skull-Wallpaper.jpg");
+  height: calc(100vh - 8em);
+  padding: 4em;
 }
 
 span, a {
@@ -21,7 +23,7 @@ a:hover {
 h1 {
 
   text-shadow: 2px 2px #9c9c9c;
-  font-family: courier;
+  font-family: 'Anonymous Pro', monospace; 
   padding: 10px;
 }
 
