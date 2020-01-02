@@ -57,8 +57,8 @@ html{
 
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 4s steps(30) 1s 1 normal both,
-             blinkTextCursor 500ms steps(30) infinite normal;
+  animation: typewriter 4s steps(35) 1s 1 normal both,
+             blinkTextCursor 500ms steps(35) infinite normal;
 }
 @keyframes typewriter{
   from{width: 0;}
