@@ -10,7 +10,7 @@ body {
 }
 
 @media only screen and (max-device-width: 480px) {
-background-image: none;
+background-image: none !important;
     }
 
 span, a {
