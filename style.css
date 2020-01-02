@@ -6,7 +6,7 @@ body {
   background-color: black;
   background-image:URL("./Images/Beautiful-Skull-Wallpaper.jpg");
   height: calc(100vh - 8em);
-  padding: 4em;
+  padding: 2em;
 }
 
 span, a {
