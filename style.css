@@ -5,8 +5,8 @@ body {
   background-repeat: no-repeat;
   background-color: black;
   background-image:URL("./Images/Beautiful-Skull-Wallpaper.jpg");
-  height: calc(100vh - 8em);
-  padding: 2em;
+  height: calc(100vh - 4em);
+  padding: 4em;
 }
 
 span, a {
@@ -31,7 +31,6 @@ p.quote {
   font-size: 14px;
   padding: 10px;
 }
-
 
 
 /* Google Fonts */
