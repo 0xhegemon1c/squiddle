@@ -9,6 +9,10 @@ body {
   padding: 4em;
 }
 
+@media only screen and (max-device-width: 480px) {
+background-image: none;
+    }
+
 span, a {
   color: green;
   font-family: monospace;
