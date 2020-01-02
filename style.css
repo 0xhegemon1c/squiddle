@@ -4,7 +4,6 @@ body {
   background-size: 1280px;
   background-repeat: no-repeat;
   background-color: black;
-  background-image:URL("./Images/Beautiful-Skull-Wallpaper.jpg");
   height: calc(100vh - 8em);
   padding: 4em;
 }
