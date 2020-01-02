@@ -1,0 +1,7 @@
+body {
+  text-align: center;
+  color: white;
+  background-color: black;
+  height: calc(100vh - 8em);
+  padding: 2em;
+}
