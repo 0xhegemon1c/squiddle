@@ -4,6 +4,8 @@ body {
   font-family: courier;
   text-align: center;
   background-image: URL("./Images/whoami.png");
+  background-repeat: no-repeat;
+  background-size: fit;   
 }
 
 img {
