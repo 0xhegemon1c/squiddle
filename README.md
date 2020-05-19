@@ -1,2 +1,2 @@
-# DEUS
-I'm working on it right now. Come back later. 
+# Squiddy's site
+My personal site. It holds links to my blog, my profile on Cliterati, and this github. 
