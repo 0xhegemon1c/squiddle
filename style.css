@@ -8,6 +8,11 @@ body {
   padding: 4em;
 }
 
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
 span, a {
   color: green;
   font-family: monospace;
