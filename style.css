@@ -71,8 +71,3 @@ html{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
 }
-
-.banner {
-    /* The image used */
-    background-image: url("./Images/banner.png");
-  }
