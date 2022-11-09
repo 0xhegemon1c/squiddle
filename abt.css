@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+  color: white;
+  background-size: 1280px;
+  background-repeat: no-repeat;
+  background-color: #008080;
+  height: calc(100vh - 8em);
+  padding: 4em;
+}
+
