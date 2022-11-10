@@ -8,3 +8,7 @@ body {
   padding: 4em;
 }
 
+hr {
+    width:50%;
+    margin:0 auto;
+}
