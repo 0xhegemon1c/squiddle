@@ -8,7 +8,15 @@ body {
   padding: 4em;
 }
 
+@font-face {
+  font-family: msSansSerif;
+  src: url(micross.woff);
+}
+
 .graybar {
   background-color: #c8c4c4;
 }
 
+.bio {
+  font-family: msSansSerif;
+}              
