@@ -19,10 +19,6 @@ main {
     justify-content: space-around;
 }
 
-.responsive {
-  max-width: 100%;
-  height: auto;
-}
 
 nav {
       border: 1px solid black;
