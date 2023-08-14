@@ -16,20 +16,10 @@ img {
   border: solid 1px black;
 }
 
-.flex-container {
-    display: flex;
-    padding:30px;
-}
-
-.flex-child {
-    flex: 1;
+.main_content {
     border: 1px solid black;
-}
-
-.flex-child:first-child {
     margin-right: 20px;
-     justify-content: space-around;
-
+    justify-content: space-around;
 }
 
 .responsive {
@@ -42,10 +32,6 @@ nav {
       padding: 5px;
 }
 
-#clickbait {
-  border: 1px solid black;
-}
-
 span, a {
   font-size: 20px;
   color: black;
@@ -53,37 +39,13 @@ span, a {
 }
 
 a:hover {
- color:  red;
-}
-
-pre {
-  color:  #41FF00;
+ color:  #5af542;
 }
 
 h1 {
   font-family: Monospace<;
   padding: 10px;
   color:  black;
-}
-
-p {
-  font-size: 20px;
-}
-
-p.quote {
-  font-family: monospace;
-  font-size: 14px;
-  padding: 10px;
-}
-
-#red {
-  color: red;
-}
-
-/* Global */
-html{
-  min-height: 100%;
-  overflow: hidden;
 }
 
 .line-1{
