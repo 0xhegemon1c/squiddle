@@ -1,3 +1,8 @@
+html {
+  text-align: center;
+  font-family: monospace;
+}
+
 img {
   border-radius: 50%;
   padding: 5px;
@@ -56,14 +61,4 @@ h1 {
 @keyframes blinkTextCursor{
   from{border-right-color: black;}
   to{border-right-color: transparent;}
-}
-
-@media only screen and (min-width:600px) {
-    font-size: 16px;
-}
-@media only screen and (min-width:1024px) {
-    font-size: 18px;
-}
-@media only screen and (min-width:1280px) {
-    font-size: 20px;
 }
