@@ -17,10 +17,15 @@ main {
     justify-content: space-around;
 }
 
+p {
+   font-size: 2vw;
+}
+
 
 nav {
       border: 1px solid black;
       padding: 5px;
+      font-size: 2vw;
 }
 
 span, a {
@@ -34,6 +39,7 @@ a:hover {
 
 h1 {
   padding: 10px;
+  font-size: 8vw;
 }
 
 .line-1{
