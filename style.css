@@ -26,12 +26,12 @@ p {
 nav {
       border: 1px solid black;
       padding: 5px;
-      font-size: max(4vw,20px);
+      font-size: max(4vw,16px);
 }
 
 span, a {
   color: black;
-
+  font-size: max(4vw,20px);
 }
 
 a:hover {
