@@ -58,17 +58,12 @@ h1 {
   to{border-right-color: transparent;}
 }
 
-html {
+@media only screen and (min-width:600px) {
     font-size: 16px;
-    text-align: center;
-    font-family: monospace;
 }
-@media (min-width:768px) {
+@media only screen and (min-width:1024px) {
     font-size: 18px;
 }
-@media (min-width:1024px) {
-    font-size: 19px;
-}
-@media (min-width:1280px) {
+@media only screen and (min-width:1280px) {
     font-size: 20px;
 }
