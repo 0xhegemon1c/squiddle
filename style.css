@@ -19,19 +19,19 @@ main {
 }
 
 p {
-   font-size: max(4vw,16px);
+   font-size: min(50vw,16px);
 }
 
 
 nav {
       border: 1px solid black;
       padding: 5px;
-      font-size: max(4vw,16px);
+      font-size: min(50vw,16px);
 }
 
 span, a {
   color: black;
-  font-size: max(4vw,16px);
+  font-size: min(50vw,16px);
 }
 
 a:hover {
@@ -40,7 +40,7 @@ a:hover {
 
 h2 {
   padding: 10px;
-  font-size: max(5vw,20px);
+  font-size: min(55vw,20px);
 }
 
 .line-1{
