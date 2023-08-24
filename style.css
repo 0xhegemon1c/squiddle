@@ -1,3 +1,9 @@
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
 html {
   text-align: center;
   font-family: monospace;
@@ -8,7 +14,7 @@ img {
   padding: 5px;
   border: solid 1px black;
   width: 100%; 
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
   display: block
 }
