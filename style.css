@@ -1,77 +1,88 @@
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}
-
-html {
-  text-align: center;
-  font-family: monospace;
-}
-
-img {
-  border-radius: 50%;
-  padding: 5px;
-  border: solid 1px black;
-  width: 100%; 
-  max-width: 300px;
-  margin: auto;
-  display: block
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 main {
     border: 1px solid black;
-    justify-content: space-around;
 }
 
-p {
-   font-size: min(50vw,16px);
-}
 
+header, nav, main, footer {
+    max-width: 1000px; /* set a max-width for large screens */
+    margin: 0 auto; /* center the content */
+    padding: 0 15px; /* some padding on left and right */
+}
 
 nav {
-      border: 1px solid black;
-      padding: 5px;
-      font-size: min(50vw,16px);
+    overflow: auto; /* helps with clearing floated items */
+    border: solid 1px black; /* add a nice little outline */
+}
+
+nav a {
+    display: block; /* make the links block items, so they are easier to tap on a mobile device */
+    padding: 5px;
+    text-decoration: none;
+    float: left; /* float the items to create a horizontal navigation */
+    width: 20%; /* divide the nav into five links, so 100% / 5 = 20% */
+    box-sizing: border-box; /* include padding and border in the link's total width */
 }
 
 span, a {
   color: black;
-  font-size: min(50vw,16px);
 }
 
 a:hover {
  color:  #5af542;
 }
 
-h2 {
-  padding: 10px;
-  font-size: min(55vw,20px);
+main img {
+    width: 100%; /* make images responsive */
+    height: auto;
+    max-width: 600px; /* you can set a max-width if you don't want the image to be too large on big screens */
+    margin: 0 auto; /* center the image */
+    border-radius: 50%; /* give the image some rounded edges */
+    border: solid 1px black; /* add a nice little outline */
 }
 
-.line-1{
-    position: relative;
-    top: 50%;
-    width: 24em;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 4vw;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);
+@media (max-width: 600px) {
+    nav a {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
 }
 
 /* Animation */
-.anim-typewriter{
+.anim-typewriter {
+  font-size: 2em; /* Set a relative font size */
+  overflow: hidden; /* Hide overflow to prevent layout shifts */
+  white-space: nowrap; /* Prevent text from wrapping */
+  width: 100%; /* Use 100% width for responsiveness */
+  max-width: 10em; /* Set a maximum width for larger screens */
+
+  /* Animation */
   animation: typewriter 4s steps(35) 1s 1 normal both,
              blinkTextCursor 500ms steps(35) infinite normal;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 10em;}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Use 100% width as the final width */
+  }
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: black;}
-  to{border-right-color: transparent;}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
