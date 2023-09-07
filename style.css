@@ -21,6 +21,7 @@ nav {
 }
 
 nav a {
+    float: left; /* float the items to create a horizontal navigation */
     display: block; /* make the links block items, so they are easier to tap on a mobile device */
     padding: 5px;
     text-decoration: none;
