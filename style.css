@@ -18,6 +18,7 @@ header, nav, main, footer {
 
 nav {
     border: solid 1px black; /* add a nice little outline */
+overflow: auto;
 }
 
 nav a {
