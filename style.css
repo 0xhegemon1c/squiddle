@@ -17,7 +17,6 @@ header, nav, main, footer {
 }
 
 nav {
-    overflow: auto; /* helps with clearing floated items */
     border: solid 1px black; /* add a nice little outline */
 }
 
@@ -25,7 +24,6 @@ nav a {
     display: block; /* make the links block items, so they are easier to tap on a mobile device */
     padding: 5px;
     text-decoration: none;
-    float: left; /* float the items to create a horizontal navigation */
     width: 20%; /* divide the nav into five links, so 100% / 5 = 20% */
     box-sizing: border-box; /* include padding and border in the link's total width */
 }
