@@ -41,7 +41,7 @@ a:hover {
 main img {
     width: 100%; /* make images responsive */
     height: auto;
-    max-width: 600px; /* you can set a max-width if you don't want the image to be too large on big screens */
+    max-width: 300px; /* you can set a max-width if you don't want the image to be too large on big screens */
     margin: 0 auto; /* center the image */
     border-radius: 50%; /* give the image some rounded edges */
     border: solid 1px black; /* add a nice little outline */
