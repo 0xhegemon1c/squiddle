@@ -9,6 +9,54 @@ main {
     border: 1px solid black;
 }
 
+.womynslandbtn {
+  background-image: url('Images/womynsland.jpg');
+  background-size: contain;
+  border: 1px black;
+  border-radius: 30%;
+  border-style: inset;
+  width: 170px;
+  height: 170px;
+  font-size: 2rem;
+  box-shadow: 5px 5px 3px #000000;
+  -moz-box-shadow: 5px 5px 3px #000000;
+-webkit-box-shadow: 5px 5x 3px #000000; 
+cursor: pointer;    
+}
+
+.llpbtn {
+  background-image: url('Images/podcast.jpg');
+  background-size: cover;
+  border: 1px black;
+  border-radius: 30%;
+  border-style: inset;
+  width: 170px;
+  height: 170px;
+  font-size: 2rem;
+  box-shadow: 5px 5px 3px #000000;
+  -moz-box-shadow: 5px 5px 3px #000000;
+-webkit-box-shadow: 5px 5x 3px #000000; 
+cursor: pointer;    
+}
+
+.sqdeyebtn {
+  background-image: url('Images/comprepair.JPG');
+  background-size: cover;
+  border: 1px black;
+  border-radius: 30%;
+  border-style: inset;
+  width: 170px;
+  height: 170px;
+  font-size: 2rem;
+  box-shadow: 5px 5px 3px #000000;
+-moz-box-shadow: 5px 5px 3px #000000;
+-webkit-box-shadow: 5px 5x 3px #000000; 
+cursor: pointer;    
+}
+
+.currentnews {
+  color: #00ff00;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
 header, nav, main, footer {
     max-width: 1000px; /* set a max-width for large screens */
