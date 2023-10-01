@@ -87,10 +87,9 @@ a:hover {
 }
 
 main img {
-    width: 100%; /* make images responsive */
-    height: auto;
-    max-width: 300px; /* you can set a max-width if you don't want the image to be too large on big screens */
-    margin: 0 auto; /* center the image */
+    max-width: 100%;  /* Scale to the width of its container */
+    height: auto;    /* Auto-adjust the height according to the original aspect ratio */
+    display: block;  /* To remove any extra space below the image */
     border-radius: 50%; /* give the image some rounded edges */
     border: solid 1px black; /* add a nice little outline */
 }
