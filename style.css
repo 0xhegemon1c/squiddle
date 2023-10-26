@@ -86,7 +86,7 @@ a:hover {
  color:  #5af542;
 }
 
-img.responsive {
+.responsive-image {
     width: 100%;        /* This ensures the image scales down with the viewport */
     max-width: 500px;   /* This ensures the image never exceeds 500 pixels in width */
     height: auto;       /* This ensures the aspect ratio of the image is maintained */
