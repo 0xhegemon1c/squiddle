@@ -87,11 +87,10 @@ a:hover {
 }
 
 img.responsive {
-    max-width: 100%;  /* Scale to the width of its container */
-    height: auto;    /* Auto-adjust the height according to the original aspect ratio */
-    display: block;  /* To remove any extra space below the image */
-    border-radius: 50%; /* give the image some rounded edges */
-    border: solid 1px black; /* add a nice little outline */
+    width: 100%;        /* This ensures the image scales down with the viewport */
+    max-width: 500px;   /* This ensures the image never exceeds 500 pixels in width */
+    height: auto;       /* This ensures the aspect ratio of the image is maintained */
+
 }
 
 @media (max-width: 600px) {
