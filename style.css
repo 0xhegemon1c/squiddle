@@ -58,12 +58,6 @@ cursor: pointer;
   color: #00ff00;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
-header, nav, main, footer {
-    max-width: 1000px; /* set a max-width for large screens */
-    margin: 0 auto; /* center the content */
-    padding: 0 15px; /* some padding on left and right */
-}
-
 nav {
     border: solid 1px black; /* add a nice little outline */
 overflow: auto;
@@ -91,44 +85,4 @@ a:hover {
     max-width: 500px;   /* This ensures the image never exceeds 500 pixels in width */
     height: auto;       /* This ensures the aspect ratio of the image is maintained */
 
-}
-
-@media (max-width: 600px) {
-    nav a {
-        float: none;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 5px;
-    }
-}
-
-/* Animation */
-.anim-typewriter {
-  font-size: 2em; /* Set a relative font size */
-  overflow: hidden; /* Hide overflow to prevent layout shifts */
-  white-space: nowrap; /* Prevent text from wrapping */
-  width: 100%; /* Use 100% width for responsiveness */
-  max-width: 10em; /* Set a maximum width for larger screens */
-
-  /* Animation */
-  animation: typewriter 4s steps(35) 1s 1 normal both,
-             blinkTextCursor 500ms steps(35) infinite normal;
-}
-
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%; /* Use 100% width as the final width */
-  }
-}
-
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: black;
-  }
-  to {
-    border-right-color: transparent;
-  }
 }
