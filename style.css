@@ -1,88 +1,71 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif; /* A modern sans-serif font */
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #F5F5F5; /* A light neutral background */
+    color: #333; /* Dark text for good contrast */
 }
 
 main {
-    border: 1px solid black;
+    max-width: 1200px; /* Limit content width for readability */
+    margin: 0 auto; /* Center content */
+    padding: 20px;
+    background-color: #FFF; /* A clean white content area */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
-.womynslandbtn {
-  background-image: url('Images/womynsland.jpg');
-  background-size: contain;
-  border: 1px black;
-  border-radius: 30%;
-  border-style: inset;
-  width: 170px;
-  height: 170px;
-  font-size: 2rem;
-  box-shadow: 5px 5px 3px #000000;
-  -moz-box-shadow: 5px 5px 3px #000000;
--webkit-box-shadow: 5px 5x 3px #000000; 
-cursor: pointer;    
-}
-
-.llpbtn {
-  background-image: url('Images/podcast.jpg');
-  background-size: cover;
-  border: 1px black;
-  border-radius: 30%;
-  border-style: inset;
-  width: 170px;
-  height: 170px;
-  font-size: 2rem;
-  box-shadow: 5px 5px 3px #000000;
-  -moz-box-shadow: 5px 5px 3px #000000;
--webkit-box-shadow: 5px 5x 3px #000000; 
-cursor: pointer;    
-}
-
-.sqdeyebtn {
-  background-image: url('Images/comprepair.JPG');
-  background-size: cover;
-  border: 1px black;
-  border-radius: 30%;
-  border-style: inset;
-  width: 170px;
-  height: 170px;
-  font-size: 2rem;
-  box-shadow: 5px 5px 3px #000000;
--moz-box-shadow: 5px 5px 3px #000000;
--webkit-box-shadow: 5px 5x 3px #000000; 
-cursor: pointer;    
-}
-
-.currentnews {
-  color: #00ff00;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
 nav {
-    border: solid 1px black; /* add a nice little outline */
-overflow: auto;
+    background-color: #2C3E50; /* Dark color for navigation */
+    padding: 10px 0;
+    overflow: auto;
 }
 
 nav a {
-    float: left; /* float the items to create a horizontal navigation */
-    display: block; /* make the links block items, so they are easier to tap on a mobile device */
-    padding: 5px;
+    float: left;
+    display: block;
+    padding: 5px 15px; /* Increase padding for better click area */
     text-decoration: none;
-    width: 20%; /* divide the nav into five links, so 100% / 5 = 20% */
-    box-sizing: border-box; /* include padding and border in the link's total width */
+    width: auto;
+    color: #FFF; /* White text on dark nav */
+    transition: background 0.3s; /* Smooth transition for hover effect */
 }
 
-span, a {
-  color: black;
-}
-
-a:hover {
- color:  #5af542;
+nav a:hover {
+    background-color: #34495E; /* Slightly darker shade on hover */
 }
 
 .responsive-image {
-    width: 100%;        /* This ensures the image scales down with the viewport */
-    max-width: 500px;   /* This ensures the image never exceeds 500 pixels in width */
-    height: auto;       /* This ensures the aspect ratio of the image is maintained */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0; /* Add some spacing around the image */
+}
 
+h1, h2 {
+    color: #2C3E50; /* Dark header color */
+}
+
+h1 {
+    font-size: 2.5em; /* Increase font size */
+    margin-bottom: 10px; /* Add spacing below header */
+}
+
+h2 {
+    font-size: 2em; /* Increase font size */
+    margin: 20px 0; /* Add spacing around sub-headers */
+}
+
+a {
+    color: #3498DB; /* Bright color for links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+a:hover {
+    color: #2980B9; /* Slightly darker shade on hover */
+}
+
+footer {
+    margin-top: 20px; /* Add some spacing above the footer */
 }
