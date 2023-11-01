@@ -57,7 +57,7 @@ cursor: pointer;
 .currentnews {
   color: #00ff00;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
+}
 nav {
     border: solid 1px black; /* add a nice little outline */
 overflow: auto;
