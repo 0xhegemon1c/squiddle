@@ -34,6 +34,7 @@ nav a {
 
 nav a:hover {
     background-color: #34495E; /* Slightly darker shade on hover */
+    background-image: linear-gradient(140deg, #77a9bd 0%, #56a1bf 50%, #1d6d8c 75%); /* Gradient color on nav bar */
 }
 
 .responsive-image {
@@ -42,6 +43,7 @@ nav a:hover {
     height: auto;
     margin: 20px 0; /* Add some spacing around the image */
     border-radius: 50%;
+    box-shadow: 10px 10px 5px lightblue; /* image shadow */
 }
 
 h1, h2 {
