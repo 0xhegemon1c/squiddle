@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./phistyle.css" rel=" stylesheet" type="text/css">
+    <title>PHI Encrypter</title>
+</head>
+<body>
+    <h1>Enter Patient Information</h1>
+    <form id="patientForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="text" id="dob" name="dob"><br><br>
+
+        <label for="mrn">Medical Record Number:</label>
+        <input type="text" id="mrn" name="mrn"><br><br>
+
+        <label for="sex">Sex:</label>
+        <input type="text" id="sex" name="sex"><br><br>
+
+        <input type="submit" value="Encrypt">
+    </form>
+
+    <h2>Plaintext (JSON)</h2>
+    <pre id="plaintextJson"></pre>
+
+    <h2>Encrypted Patient Data</h2>
+    <div id="encryptedData"></div>
+
+    <button id="decryptButton">Decrypt</button>
+
+    <h2>Decrypted Patient Data</h2>
+    <pre id="decryptedData"></pre>
+
+    <script>
+        document.getElementById('patientForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var dob = document.getElementById('dob').value;
+            var mrn = document.getElementById('mrn').value;
+            var sex = document.getElementById('sex').value;
+
+            var patientData = {
+                name: name,
+                dob: dob,
+                mrn: mrn,
+                sex: sex
+            };
+
+            // Convert patientData to JSON string and display
+            var jsonData = JSON.stringify(patientData, null, 2);
+            document.getElementById('plaintextJson').textContent = jsonData;
+
+            // Encrypt the JSON data
+            encrypt(jsonData);
+        });
+
+        function encrypt(data) {
+            // Generate a random 128-bit (16-byte) key
+            var key = crypto.getRandomValues(new Uint8Array(16));
+
+            // Convert key to hexadecimal string
+            var keyHex = Array.prototype.map.call(key, function(byte) {
+                return ('0' + (byte & 0xFF).toString(16)).slice(-2);
+            }).join('');
+
+            // Convert data to Uint8Array
+            var dataBytes = new TextEncoder().encode(data);
+
+            // Generate a random 128-bit (16-byte) IV
+            var iv = crypto.getRandomValues(new Uint8Array(16));
+
+            // Encrypt data using AES-CBC algorithm
+            window.crypto.subtle.encrypt(
+                {
+                    name: "AES-CBC",
+                    iv: iv
+                },
+                key,
+                dataBytes
+            ).then(function(ciphertext) {
+                // Combine IV and ciphertext
+                var ivCiphertext = new Uint8Array(iv.length + ciphertext.byteLength);
+                ivCiphertext.set(iv);
+                ivCiphertext.set(new Uint8Array(ciphertext), iv.length);
+
+                // Encode IV and ciphertext as Base64
+                var encryptedData = btoa(String.fromCharCode.apply(null, ivCiphertext));
+
+                // Display the encrypted data
+                document.getElementById('encryptedData').innerHTML = "<strong>Encrypted Data:</strong> " + encryptedData + "<br><strong>Encryption Key:</strong> " + keyHex;
+
+                // Store encrypted data and key for decryption
+                sessionStorage.setItem('encryptedData', encryptedData);
+                sessionStorage.setItem('encryptionKey', keyHex);
+            }).catch(function(err) {
+                console.error('Encryption error:', err);
+            });
+        }
+
+        document.getElementById('decryptButton').addEventListener('click', function() {
+            // Retrieve encrypted data and key from sessionStorage
+            var encryptedData = sessionStorage.getItem('encryptedData');
+            var encryptionKey = sessionStorage.getItem('encryptionKey');
+
+            if (encryptedData && encryptionKey) {
+                // Decode Base64 encrypted data
+                var ivCiphertext = new Uint8Array(atob(encryptedData).split('').map(function(c) {
+                    return c.charCodeAt(0);
+                }));
+
+                // Extract IV and ciphertext
+                var iv = ivCiphertext.slice(0, 16);
+                var ciphertext = ivCiphertext.slice(16);
+
+                // Decrypt ciphertext using AES-CBC algorithm
+                window.crypto.subtle.decrypt(
+                    {
+                        name: "AES-CBC",
+                        iv: iv
+                    },
+                    hexStringToUint8Array(encryptionKey),
+                    ciphertext
+                ).then(function(decryptedData) {
+                    // Convert decrypted data to plaintext
+                    var plaintext = new TextDecoder().decode(decryptedData);
+
+                    // Display the decrypted data
+                    document.getElementById('decryptedData').textContent = plaintext;
+                }).catch(function(err) {
+                    console.error('Decryption error:', err);
+                });
+            }
+        });
+
+        // Helper function to convert hexadecimal string to Uint8Array
+        function hexStringToUint8Array(hexString) {
+            return new Uint8Array(hexString.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+        }
+    </script>
+</body>
+</html>
