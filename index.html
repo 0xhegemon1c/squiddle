@@ -3,69 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./phistyle.css" rel=" stylesheet" type="text/css">
     <title>Encrypt Patient Data</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        h1, h2 {
-            margin-bottom: 10px;
-        }
-
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"], button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover, button:hover {
-            background-color: #45a049;
-        }
-
-        #plaintextJson, #encryptedData {
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-            overflow: auto;
-        }
-
-        #buttons {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
     <h1>Enter Patient Information</h1>
@@ -86,11 +25,18 @@
     </form>
 
     <div id="buttons">
+        <button id="encryptButton" style="display: none;">Encrypt JSON Data</button>
         <button id="decryptButton" style="display: none;">Decrypt Encrypted Data</button>
     </div>
 
+    <h2>Plaintext (JSON)</h2>
+    <pre id="plaintextJson"></pre>
+
     <h2>Encrypted Patient Data</h2>
     <pre id="encryptedData"></pre>
+
+    <h2>Decrypted Patient Data</h2>
+    <pre id="decryptedData"></pre>
 
     <script>
         document.getElementById('patientForm').addEventListener('submit', function(event) {
@@ -108,21 +54,41 @@
                 sex: sex
             };
 
-            // Convert patientData to JSON string
-            var jsonData = JSON.stringify(patientData);
+            // Convert patientData to JSON string and display
+            var jsonData = JSON.stringify(patientData, null, 2);
+            document.getElementById('plaintextJson').textContent = jsonData;
 
-            // Encrypt the JSON data
-            encrypt(jsonData);
+            // Show encryption button
+            document.getElementById('encryptButton').style.display = 'inline';
+
+            // Hide decryption button
+            document.getElementById('decryptButton').style.display = 'none';
         });
 
-        document.getElementById('decryptButton').addEventListener('click', function() {
+        document.getElementById('encryptButton').addEventListener('click', async function() {
+            var jsonData = document.getElementById('plaintextJson').textContent;
+
+            // Encrypt the JSON data
+            var encryptedData = await encrypt(jsonData);
+
+            // Display the encrypted data
+            document.getElementById('encryptedData').textContent = encryptedData;
+
+            // Show decryption button
+            document.getElementById('decryptButton').style.display = 'inline';
+        });
+
+        document.getElementById('decryptButton').addEventListener('click', async function() {
             var encryptedData = document.getElementById('encryptedData').textContent;
 
             // Decrypt the encrypted data
-            decrypt(encryptedData);
+            var decryptedData = await decrypt(encryptedData);
 
-            // Hide decryption button
-            this.style.display = 'none';
+            // Display the decrypted data
+            document.getElementById('decryptedData').textContent = decryptedData;
+
+            // Show encryption button
+            document.getElementById('encryptButton').style.display = 'inline';
         });
 
         async function encrypt(data) {
@@ -153,13 +119,11 @@
                 // Convert the encrypted data to a Base64-encoded string
                 var encryptedData = btoa(String.fromCharCode.apply(null, new Uint8Array(encryptedBuffer)));
 
-                // Display the encrypted data
-                document.getElementById('encryptedData').textContent = encryptedData;
-
-                // Show decryption button
-                document.getElementById('decryptButton').style.display = 'inline';
+                // Return the encrypted data
+                return encryptedData;
             } catch (error) {
                 console.error('Encryption error:', error);
+                return null;
             }
         }
 
@@ -191,10 +155,11 @@
                 // Convert the decrypted ArrayBuffer to a string
                 var decryptedData = new TextDecoder().decode(decryptedBuffer);
 
-                // Log the decrypted data (you may want to display it instead)
-                console.log('Decrypted Data:', decryptedData);
+                // Return the decrypted data
+                return decryptedData;
             } catch (error) {
                 console.error('Decryption error:', error);
+                return null;
             }
         }
     </script>
