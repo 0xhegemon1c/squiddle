@@ -3,8 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./phistyle.css" rel=" stylesheet" type="text/css">
     <title>Encrypt Patient Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, button:hover {
+            background-color: #45a049;
+        }
+
+        #buttons {
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            overflow: auto;
+        }
+    </style>
 </head>
 <body>
     <h1>Enter Patient Information</h1>
@@ -126,41 +186,42 @@
                 return null;
             }
         }
-async function decrypt(data) {
-    try {
-        // Decode the Base64-encoded string to an ArrayBuffer
-        var encryptedBuffer = Uint8Array.from(atob(data), c => c.charCodeAt(0)).buffer;
 
-        // Generate the encryption key (you may want to securely store this key instead of generating it every time)
-        var key = await window.crypto.subtle.generateKey(
-            {
-                name: "AES-GCM",
-                length: 256
-            },
-            true,
-            ["encrypt", "decrypt"]
-        );
+        async function decrypt(data) {
+            try {
+                // Decode the Base64-encoded string to an ArrayBuffer
+                var encryptedBuffer = Uint8Array.from(atob(data), c => c.charCodeAt(0)).buffer;
 
-        // Decrypt the encrypted data using the encryption key
-        var decryptedBuffer = await window.crypto.subtle.decrypt(
-            {
-                name: "AES-GCM",
-                iv: new Uint8Array(12) // You should retrieve the IV from the encrypted data or generate it securely
-            },
-            key,
-            encryptedBuffer
-        );
+                // Generate the encryption key (you may want to securely store this key instead of generating it every time)
+                var key = await window.crypto.subtle.generateKey(
+                    {
+                        name: "AES-GCM",
+                        length: 256
+                    },
+                    true,
+                    ["encrypt", "decrypt"]
+                );
 
-        // Convert the decrypted ArrayBuffer to a string
-        var decryptedData = new TextDecoder().decode(decryptedBuffer);
+                // Decrypt the encrypted data using the encryption key
+                var decryptedBuffer = await window.crypto.subtle.decrypt(
+                    {
+                        name: "AES-GCM",
+                        iv: new Uint8Array(12) // You should retrieve the IV from the encrypted data or generate it securely
+                    },
+                    key,
+                    encryptedBuffer
+                );
 
-        // Return the decrypted data
-        return decryptedData;
-    } catch (error) {
-        console.error('Decryption error:', error);
-        return null;
-    }
-}
+                // Convert the decrypted ArrayBuffer to a string
+                var decryptedData = new TextDecoder().decode(decryptedBuffer);
+
+                // Return the decrypted data
+                return decryptedData;
+            } catch (error) {
+                console.error('Decryption error:', error);
+                return null;
+            }
+        }
     </script>
 </body>
 </html>
