@@ -126,42 +126,41 @@
                 return null;
             }
         }
+async function decrypt(data) {
+    try {
+        // Decode the Base64-encoded string to an ArrayBuffer
+        var encryptedBuffer = Uint8Array.from(atob(data), c => c.charCodeAt(0)).buffer;
 
-        async function decrypt(data) {
-            try {
-                // Decode the Base64-encoded string to an ArrayBuffer
-                var encryptedBuffer = Uint8Array.from(atob(data), c => c.charCodeAt(0)).buffer;
+        // Generate the encryption key (you may want to securely store this key instead of generating it every time)
+        var key = await window.crypto.subtle.generateKey(
+            {
+                name: "AES-GCM",
+                length: 256
+            },
+            true,
+            ["encrypt", "decrypt"]
+        );
 
-                // Generate the encryption key (you may want to securely store this key instead of generating it every time)
-                var key = await window.crypto.subtle.generateKey(
-                    {
-                        name: "AES-GCM",
-                        length: 256
-                    },
-                    true,
-                    ["encrypt", "decrypt"]
-                );
+        // Decrypt the encrypted data using the encryption key
+        var decryptedBuffer = await window.crypto.subtle.decrypt(
+            {
+                name: "AES-GCM",
+                iv: new Uint8Array(12) // You should retrieve the IV from the encrypted data or generate it securely
+            },
+            key,
+            encryptedBuffer
+        );
 
-                // Decrypt the encrypted data using the encryption key
-                var decryptedBuffer = await window.crypto.subtle.decrypt(
-                    {
-                        name: "AES-GCM",
-                        iv: new Uint8Array(12) // You should retrieve the IV from the encrypted data or generate it securely
-                    },
-                    key,
-                    encryptedBuffer
-                );
+        // Convert the decrypted ArrayBuffer to a string
+        var decryptedData = new TextDecoder().decode(decryptedBuffer);
 
-                // Convert the decrypted ArrayBuffer to a string
-                var decryptedData = new TextDecoder().decode(decryptedBuffer);
-
-                // Return the decrypted data
-                return decryptedData;
-            } catch (error) {
-                console.error('Decryption error:', error);
-                return null;
-            }
-        }
+        // Return the decrypted data
+        return decryptedData;
+    } catch (error) {
+        console.error('Decryption error:', error);
+        return null;
+    }
+}
     </script>
 </body>
 </html>
