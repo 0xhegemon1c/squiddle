@@ -1,4 +1,4 @@
-body {
+ body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -46,7 +46,7 @@ body {
             background-color: #45a049;
         }
 
-        #plaintextJson, #decryptedData {
+        #plaintextJson, #encryptedData {
             background-color: #f9f9f9;
             padding: 10px;
             border-radius: 5px;
@@ -55,6 +55,6 @@ body {
             overflow: auto;
         }
 
-        #encryptedData {
+        #buttons {
             margin-bottom: 20px;
         }
