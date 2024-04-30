@@ -3,10 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./phistyle.css" rel=" stylesheet" type="text/css">>
-    <title>Patient Data Flow</title>
+    <title>Encrypt Patient Data</title>
     <style>
-       cc
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, button:hover {
+            background-color: #45a049;
+        }
+
+        #plaintextJson, #encryptedData {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            overflow: auto;
+        }
+
+        #buttons {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -28,12 +86,8 @@
     </form>
 
     <div id="buttons">
-        <button id="encryptButton" style="display: none;">Encrypt JSON Data</button>
         <button id="decryptButton" style="display: none;">Decrypt Encrypted Data</button>
     </div>
-
-    <h2>Plaintext (JSON)</h2>
-    <pre id="plaintextJson"></pre>
 
     <h2>Encrypted Patient Data</h2>
     <pre id="encryptedData"></pre>
@@ -54,59 +108,94 @@
                 sex: sex
             };
 
-            // Convert patientData to JSON string and display
-            var jsonData = JSON.stringify(patientData, null, 2);
-            document.getElementById('plaintextJson').textContent = jsonData;
-
-            // Show encryption button
-            document.getElementById('encryptButton').style.display = 'inline';
-
-            // Hide decryption button
-            document.getElementById('decryptButton').style.display = 'none';
-        });
-
-        document.getElementById('encryptButton').addEventListener('click', function() {
-            var jsonData = document.getElementById('plaintextJson').textContent;
+            // Convert patientData to JSON string
+            var jsonData = JSON.stringify(patientData);
 
             // Encrypt the JSON data
-            var encryptedData = encrypt(jsonData);
-
-            // Display the encrypted data
-            document.getElementById('encryptedData').textContent = encryptedData;
-
-            // Hide encryption button
-            this.style.display = 'none';
-
-            // Show decryption button
-            document.getElementById('decryptButton').style.display = 'inline';
+            encrypt(jsonData);
         });
 
         document.getElementById('decryptButton').addEventListener('click', function() {
             var encryptedData = document.getElementById('encryptedData').textContent;
 
             // Decrypt the encrypted data
-            var decryptedData = decrypt(encryptedData);
-
-            // Display the decrypted data
-            document.getElementById('encryptedData').textContent = decryptedData;
+            decrypt(encryptedData);
 
             // Hide decryption button
             this.style.display = 'none';
-
-            // Show encryption button
-            document.getElementById('encryptButton').style.display = 'inline';
         });
 
-        function encrypt(data) {
-            // Replace this with your encryption logic
-            // For demonstration, just return the input data
-            return "Encrypted Data: " + data + " (AES)";
+        async function encrypt(data) {
+            try {
+                // Generate a random encryption key
+                var key = await window.crypto.subtle.generateKey(
+                    {
+                        name: "AES-GCM",
+                        length: 256
+                    },
+                    true,
+                    ["encrypt", "decrypt"]
+                );
+
+                // Convert the JSON data to an ArrayBuffer
+                var dataBuffer = new TextEncoder().encode(data);
+
+                // Encrypt the data using the encryption key
+                var encryptedBuffer = await window.crypto.subtle.encrypt(
+                    {
+                        name: "AES-GCM",
+                        iv: window.crypto.getRandomValues(new Uint8Array(12)) // Generate a random IV
+                    },
+                    key,
+                    dataBuffer
+                );
+
+                // Convert the encrypted data to a Base64-encoded string
+                var encryptedData = btoa(String.fromCharCode.apply(null, new Uint8Array(encryptedBuffer)));
+
+                // Display the encrypted data
+                document.getElementById('encryptedData').textContent = encryptedData;
+
+                // Show decryption button
+                document.getElementById('decryptButton').style.display = 'inline';
+            } catch (error) {
+                console.error('Encryption error:', error);
+            }
         }
 
-        function decrypt(data) {
-            // Replace this with your decryption logic
-            // For demonstration, remove the "Encrypted Data: " prefix
-            return data.replace("Encrypted Data: ", "");
+        async function decrypt(data) {
+            try {
+                // Decode the Base64-encoded string to an ArrayBuffer
+                var encryptedBuffer = Uint8Array.from(atob(data), c => c.charCodeAt(0)).buffer;
+
+                // Generate the encryption key (you may want to securely store this key instead of generating it every time)
+                var key = await window.crypto.subtle.generateKey(
+                    {
+                        name: "AES-GCM",
+                        length: 256
+                    },
+                    true,
+                    ["encrypt", "decrypt"]
+                );
+
+                // Decrypt the encrypted data using the encryption key
+                var decryptedBuffer = await window.crypto.subtle.decrypt(
+                    {
+                        name: "AES-GCM",
+                        iv: new Uint8Array(12) // You should retrieve the IV from the encrypted data or generate it securely
+                    },
+                    key,
+                    encryptedBuffer
+                );
+
+                // Convert the decrypted ArrayBuffer to a string
+                var decryptedData = new TextDecoder().decode(decryptedBuffer);
+
+                // Log the decrypted data (you may want to display it instead)
+                console.log('Decrypted Data:', decryptedData);
+            } catch (error) {
+                console.error('Decryption error:', error);
+            }
         }
     </script>
 </body>
