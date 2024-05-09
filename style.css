@@ -63,6 +63,7 @@ h2 {
 a {
     color: #3498DB; /* Bright color for links */
     transition: color 0.3s; /* Smooth transition for hover effect */
+    font-size: 25px; /* Set link font size */
 }
 
 a:hover {
