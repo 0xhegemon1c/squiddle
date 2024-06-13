@@ -1,23 +1,25 @@
 /* Base Styles */
 body {
-    font-family: 'Nunito', sans-serif; /* A modern sans-serif font */
+    font-family: Roboto;
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #F5F5F5; /* A light neutral background */
-    color: #333; /* Dark text for good contrast */
+    background-color: black;
+    color: #87f266;
 }
 
 main {
     max-width: 1200px; /* Limit content width for readability */
     margin: 0 auto; /* Center content */
     padding: 20px;
-    background-color: #FFF; /* A clean white content area */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    background-color: black;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: #87f266;
 }
 
 nav {
-    background-color: #2C3E50; /* Dark color for navigation */
+    background-color: black; 
     padding: 10px 0;
     overflow: auto;
 }
@@ -25,15 +27,15 @@ nav {
 nav a {
     float: left;
     display: block;
-    padding: 5px 15px; /* Increase padding for better click area */
+    padding: 5px 15px; 
     text-decoration: none;
     width: auto;
-    color: #FFF; /* White text on dark nav */
-    transition: background 0.3s; /* Smooth transition for hover effect */
+    color: #87f266; 
+    transition: background 0.3s; 
 }
 
 nav a:hover {
-    background-color: #34495E; /* Slightly darker shade on hover */
+    background-color: white; /* Slightly darker shade on hover */
     background-image: linear-gradient(140deg, #77a9bd 0%, #56a1bf 50%, #1d6d8c 75%); /* Gradient color on nav bar */
 }
 
@@ -41,13 +43,15 @@ nav a:hover {
     width: 100%;
     max-width: 500px;
     height: auto;
-    margin: 20px 0; /* Add some spacing around the image */
+    margin: 20px 0; 
     border-radius: 50%;
-    box-shadow: 10px 10px 5px lightblue; /* image shadow */
+    border-style: solid;
+    border-width: 5px;
+    border-color: #87f266;
 }
 
 h1, h2 {
-    color: #2C3E50; /* Dark header color */
+    color: #87f266; /* Dark header color */
 }
 
 h1 {
