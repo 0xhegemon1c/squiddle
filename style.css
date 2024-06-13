@@ -19,7 +19,7 @@ main {
 }
 
 .navbar {
-    background-image: url('https://www.industrialempathy.com/img/remote/ZiClJf-1918w.jpg');
+    background-image: url('Images/noise.png');
     background-size: cover; /* Make the image cover the entire navbar */
     background-repeat: no-repeat; /* Ensure the image doesn't repeat */
     background-position: center; /* Center the image vertically */
