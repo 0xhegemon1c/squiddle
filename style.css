@@ -1,6 +1,6 @@
 /* Base Styles */
 body {
-    font-family: mono, sans-serif;
+    font-family: monospace;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -22,6 +22,9 @@ nav {
     background-color: black; 
     padding: 10px 0;
     overflow: auto;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: #87f266;
 }
 
 nav a {
