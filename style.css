@@ -20,7 +20,7 @@ main {
 }
 
 .navbar {
-    background-image: url('Images/noise.png');
+    background-image: url('Images/img-noise.png');
     background-size: cover; /* Make the image cover the entire navbar */
     background-repeat: no-repeat; /* Ensure the image doesn't repeat */
     background-position: center; /* Center the image vertically */
