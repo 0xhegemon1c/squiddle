@@ -13,7 +13,7 @@ main {
     margin: 0 auto; /* Center content */
     padding: 20px;
     background-color: black;
-    border-width: 2.5px;
+    border-width: 2px;
     border-style: solid;
     border-color: #87f266;
 }
@@ -22,7 +22,7 @@ nav {
     background-color: black; 
     padding: 10px 0;
     overflow: auto;
-    border-width: 2.5px;
+    border-width: 2px;
     border-style: solid;
     border-color: #87f266;
 }
@@ -40,7 +40,7 @@ nav a {
 nav a:hover {
     background-color: white; /* Slightly darker shade on hover */
     border-style: solid;
-    border-width: 2.5px;
+    border-width: 2px;
     border-color: #87f266;
 }
 
@@ -51,12 +51,13 @@ nav a:hover {
     margin: 20px 0; 
     border-radius: 50%;
     border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
     border-color: #87f266;
 }
 
 h1, h2 {
-    color: #87f266; /* Dark header color */
+    color: #87f266;
+    margin-bottom: 10px; 
 }
 
 h1 {
@@ -64,21 +65,15 @@ h1 {
     margin-bottom: 10px; /* Add spacing below header */
 }
 
-h2 {
-    font-size: 2em; /* Increase font size */
-    margin: 20px 0; /* Add spacing around sub-headers */
-}
-
 a {
-    color: #3498DB; /* Bright color for links */
-    transition: color 0.3s; /* Smooth transition for hover effect */
-    font-size: 25px; /* Set link font size */
+    color: #87f266; 
+    transition: color 0.3s; /
 }
 
 a:hover {
-    color: #2980B9; /* Slightly darker shade on hover */
+    color: #183b1e; 
 }
 
 footer {
-    margin-top: 20px; /* Add some spacing above the footer */
+    margin-top: 20px; 
 }
