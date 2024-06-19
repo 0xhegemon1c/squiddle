@@ -80,6 +80,10 @@ a:hover {
     color: #183b1e; 
 }
 
+.talks {
+    padding-top: 1em;
+}
+
 footer {
     margin-top: 20px; 
 }
