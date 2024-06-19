@@ -17,6 +17,7 @@ main {
     border-width: 2.5px;
     border-style: solid;
     border-color: #87f266;
+    background-image: url(Images/img-noise.png);
 }
 
 .navbar {
