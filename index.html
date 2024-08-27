@@ -7,13 +7,19 @@
     <title>Hello World</title>
     <link rel="shortcut icon" href="./Images/squidico.ico" type="image/x-icon" />
     <link href="./style.css" rel="stylesheet" type="text/css">
+    <script src="scripts.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <meta name="robots" content="noindex,nofollow">
+    <style>
+        .talks-content {
+            display: none; /* Hide the talks content initially */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <main class="sidebar">
-            <img class="responsive-image" src="./Images/GrungeSquid.jpg" alt="Squiddy is grinning while sitting in Bird34ter's chair and rocking a fresh, highlighter yellow mullet.">
+            <img class="responsive-image" src="Images/GrungeSquid.jpg" alt="Squiddy is grinning while sitting in Bird34ter's chair and rocking a fresh, highlighter yellow mullet.">
             <h1>Who am I?</h1>
             <p>I'm squiddy. I do a lot of different things, check them out while you're here.</p>
             <p>You can follow me on <a href="https://defcon.social/@teuthida">Mastodon</a> if you want.</p>
@@ -21,11 +27,41 @@
         </main>
         <div class="content">
             <nav class="navbar">
-                <a href="./talks.html">Talks</a> 
+                <a href="javascript:void(0);" onclick="showTalks()">Talks</a>
                 <a href="https://squidist.home.blog/">Blog</a> 
                 <a href="nothing yet">Résumé</a> 
                 <a href="nothing yet">The Shop</a> 
             </nav>
+            
+            <!-- Talks Content Placeholder -->
+            <div id="talksContent" class="talks-content">
+                <div>
+                    <a href="Talks/Who Cashed My Check.pdf">Who Cashed My Check?! Catching (Very Obvious) Fraudsters</a>
+                    <p>2024: DEFCON 32's DC Groups VR Village</p>
+                    <br>
+                    <a href="Talks/Gender Inclusive Features Across the Health Information System.pdf"> Gender Inclusive Features Across the HIS</a>
+                    <p>2023: DEFCON 31's DC Groups VR Village</p>
+                    <br>
+                    <a href="Talks/Security Concerns of the Medical Laboratory.pdf"> Security Concerns of the Medical Laboratory</a>
+                    <p>2022: DEFCON 30's DC Groups VR Village</p>
+                    <br>
+                    <a href="Talks/Basic OSINT.pdf"> Basic OSINT: Mining Personal Data </a> 
+                    <p>2021: DC858</p>
+                    <p>2020: DEFCON 28's DC Groups VR Village</p>
+                    <br>
+                    <a href="Talks/ptracker.pdf"> Tracking the Period Trackers </a> 
+                    <p>2019: Summercon</p>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=SvwSkhcqO_Q&t=196s"> OSINT: Utilizing Buscador </a>
+                    <p>2018: DC217</p>
+                    <br>
+                    <a href="" class="talk"> Laser Demo: Cool Like Styropyro </a>
+                    <p>2018: DC217</p>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=ytwCi_lXqqk"> Doxing: Mining Personal Data </a> 
+                    <p>2018: CU2600</p>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
