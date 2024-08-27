@@ -7,12 +7,12 @@ body {
     color: #87f266;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; 
 }
 
 .container {
-    display: flex;
-    flex: 1;
+    display: flex; 
+    flex: 1; 
 }
 
 .sidebar {
@@ -22,17 +22,18 @@ body {
     border-width: 2.5px;
     border-style: solid;
     border-color: #87f266;
+    background-image: url(Images/img-noise.png);
     box-sizing: border-box; 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
     height: calc(100vh - 40px); 
 }
 
 .content {
     flex: 1; 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center; 
     justify-content: flex-start; 
 }
@@ -47,8 +48,23 @@ body {
     background-color: black;
 }
 
-.navbar a { 
-    margin: 0 15px;
+.talks-content {
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+.talks-content a {
+    display: inline-block; 
+    margin: 5px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center; 
+}
+
+.navbar a {  
+    margin: 0 15px; 
     text-decoration: none;
     color: #87f266; 
     transition: background 0.3s; 
@@ -73,7 +89,7 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2em; 
     margin-bottom: 10px; 
     color: #87f266;
     text-align: center; 
