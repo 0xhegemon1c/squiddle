@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: monospace;
     font-size: 18px; 
@@ -7,51 +8,44 @@ body {
     color: #87f266;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
 .container {
-    display: flex; 
-    align-items: flex-start; 
-    width: 100%;
-}
-
-.left-column {
     display: flex;
-    flex-direction: column; 
-    width: 250px; 
+    flex: 1; 
 }
 
 .sidebar {
+    width: 250px; 
     padding: 20px;
     background-color: black;
     border-width: 2.5px;
     border-style: solid;
     border-color: #87f266;
-    background-image: url(Images/img-noise.png);
     box-sizing: border-box; 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
+    height: calc(100vh - 40px); 
 }
 
-.right-column {
+.content {
     flex: 1; 
     display: flex;
-    justify-content: center; 
+    flex-direction: column;
     align-items: center; 
-    flex-direction: column; 
+    justify-content: flex-start; 
 }
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     padding: 10px;
     border-width: 2.5px;
     border-style: solid;
     border-color: #87f266;
     background-color: black;
-    background-image: url('Images/img-noise.png');
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center; 
@@ -59,7 +53,7 @@ body {
 
 nav {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 nav a {
@@ -91,11 +85,11 @@ h1 {
     font-size: 2em; 
     margin-bottom: 10px; 
     color: #87f266;
-    text-align: center; 
+    text-align: center;
 }
 
 p {
-    text-align: center;
+    text-align: center; 
 }
 
 a {
@@ -114,4 +108,5 @@ footer {
     border-top: 2.5px solid #87f266;
     width: 100%;
     box-sizing: border-box;
+    margin-top: auto;
 }
