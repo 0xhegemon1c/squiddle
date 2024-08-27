@@ -101,7 +101,7 @@ a:hover {
 }
 
 a.talk {
-    text-align: center;
+    text-content: center !important;
 }
 
 footer {
