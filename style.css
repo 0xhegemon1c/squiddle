@@ -1,54 +1,76 @@
-/* Base Styles */
 body {
     font-family: monospace;
-    font-size: 18px; /* Base font size */
+    font-size: 18px; 
     margin: 0;
     padding: 0;
-    text-align: center;
     background-color: black;
     color: #87f266;
-    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
-main {
-    max-width: 1200px; /* Limit content width for readability */
-    margin: 0 auto; /* Center content */
+.container {
+    display: flex; 
+    align-items: flex-start; 
+    width: 100%;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column; 
+    width: 250px; 
+}
+
+.sidebar {
     padding: 20px;
     background-color: black;
     border-width: 2.5px;
     border-style: solid;
     border-color: #87f266;
     background-image: url(Images/img-noise.png);
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-column {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
 }
 
 .navbar {
-    background-image: url('Images/img-noise.png');
-    background-size: cover; /* Make the image cover the entire navbar */
-    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
-    background-position: center; /* Center the image vertically */
-}
-
-nav {
-    background-color: black; 
-    padding: 10px 0;
-    overflow: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
     border-width: 2.5px;
     border-style: solid;
     border-color: #87f266;
+    background-color: black;
+    background-image: url('Images/img-noise.png');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+nav {
+    display: flex;
+    justify-content: center; 
 }
 
 nav a {
-    float: left;
-    display: block;
-    padding: 5px 15px; 
+    margin: 0 15px;
     text-decoration: none;
-    width: auto;
     color: #87f266; 
     transition: background 0.3s; 
 }
 
 nav a:hover {
-    background-color: white; /* Slightly darker shade on hover */
+    background-color: white; 
     border-style: solid;
     border-width: 2.5px;
     border-color: #87f266;
@@ -56,7 +78,7 @@ nav a:hover {
 
 .responsive-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 200px; 
     height: auto;
     margin: 20px 0; 
     border-radius: 50%;
@@ -66,25 +88,30 @@ nav a:hover {
 }
 
 h1 {
-    font-size: 2em; /* Increase font size, relative to the base font size */
+    font-size: 2em; 
     margin-bottom: 10px; 
     color: #87f266;
-    margin-bottom: 10px; 
+    text-align: center; 
+}
+
+p {
+    text-align: center;
 }
 
 a {
     color: #87f266; 
-    transition: color 0.3s; /
+    transition: color 0.3s;
 }
 
 a:hover {
     color: #183b1e; 
 }
 
-.talks {
-    padding-top: 3em;
-}
-
 footer {
-    margin-top: 20px; 
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    border-top: 2.5px solid #87f266;
+    width: 100%;
+    box-sizing: border-box;
 }
