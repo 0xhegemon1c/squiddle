@@ -51,6 +51,7 @@ body {
 .talks-content {
     margin-top: 20px; 
     text-align: center; 
+    display: none;
 }
 
 .talks-content a {
