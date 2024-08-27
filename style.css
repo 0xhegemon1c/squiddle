@@ -113,7 +113,8 @@ footer {
     padding: 10px;
     background-color: black;
     border-top: 2.5px solid #87f266;
-    width: 100%;
+    width: 100%; 
     box-sizing: border-box;
     margin-top: auto; 
+    align-self: center;
 }
