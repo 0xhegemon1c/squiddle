@@ -1,4 +1,3 @@
-/* Base Styles */
 body {
     font-family: monospace;
     font-size: 18px; 
@@ -99,6 +98,10 @@ a {
 
 a:hover {
     color: #183b1e; 
+}
+
+.talk {
+    text-align: center;
 }
 
 footer {
