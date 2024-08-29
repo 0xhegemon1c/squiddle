@@ -15,5 +15,5 @@ function showTalks() {
 }
 
  window.addEventListener("load", (event) => {
-            new textFlag({text: "Who are you?..",color:["#87f266"]});
+            new cursoreffects.textFlag({ text: "test", color: ["#FF6800"] });
         });
