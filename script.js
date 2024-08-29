@@ -14,6 +14,6 @@ function showTalks() {
     }
 }
 
-window.addEventListener("load", (event) => {
-  new textFlag({text: "Who are you?..",color:["#87f266"]});
-});
+ window.addEventListener("load", (event) => {
+            new textFlag({text: "Who are you?..",color:["#87f266"]});
+        });
