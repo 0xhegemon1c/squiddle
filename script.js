@@ -13,3 +13,7 @@ function showTalks() {
         talksContent.style.display = "none";
     }
 }
+
+window.addEventListener("load", (event) => {
+  new textFlag({text: "Who are you?..",color:["#87f266"]});
+});
