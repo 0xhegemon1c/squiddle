@@ -13,7 +13,3 @@ function showTalks() {
         talksContent.style.display = "none";
     }
 }
-
- window.addEventListener("load", (event) => {
-            new cursoreffects.textFlag({ text: "who are you?..", color: ["#87f266"] });
-        });
